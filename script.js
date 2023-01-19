@@ -8,6 +8,8 @@ function palindrome(str){
         if(str1.charAt(i)!=str1.charAt(j)){
             return false;
         }
+		i++;
+		j--;
     }
     return true;
 }
