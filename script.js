@@ -1,13 +1,17 @@
 // complete the given function
 function palindrome(str){
-	var str1=str.toLowerCase();
-    var start=0;
-	var len=str1.length
-    var end=Math.floor(len/2)
-    for(var start=0; start<mid; start++){
-        if(str1[start]!=str1[len-1-start]){
+	let arr = [...str];
+    // console.log(arr);
+    let arrCopy = [...str];    // as reverse method also make changes to original array
+    let arrReverse = arr.reverse();
+        // arr = arrCopy;
+    // console.log(`reverseArray:${arrReverse}`);
+    // console.log(`array:${arr}`);
+ 
+     for (let i = 0; i < arr.length; i++) {
+        if (arrCopy[i] != arrReverse[i]) { 
             return false;
-        }		
+        }
     }
     return true;
 }
